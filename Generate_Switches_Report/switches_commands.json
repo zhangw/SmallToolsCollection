@@ -1,0 +1,18 @@
+{
+	"switches_layer2":{
+		"types":["2960","2950","2918","3550"]
+		,"commands":["show version","show cdp neighbors",["show memory summary","show processes cpu"],"show vlan brief"]
+	}
+	,"switches_layer3":{
+		"types":["3560","3750","4506","4510"]
+		,"commands":["show version","show cdp neighbors","show memory summary","show ip route static","show vlan brief"]
+	}
+	,"routers":{
+		"types":["2911"]
+		,"commands":["show version",["show cdp neighbors","show ip eigrp neighbors"],["show memory summary","show processes cpu"],"show run | section eigrp"]
+	}
+	,"router1":{
+		"types":["3745"]
+		,"commands":["show version",["show cdp neighbors","show ip eigrp neighbors"],["show memory summary","show processes cpu"],"show run | begin eigrp"]
+	}
+}

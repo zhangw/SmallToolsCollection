@@ -1,0 +1,4 @@
+﻿# Ignore everything in this directory which used to unzip the .docx file
+*
+# Except this file
+!.gitignore

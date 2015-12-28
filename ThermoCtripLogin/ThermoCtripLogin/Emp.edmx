@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BPMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BPMModelStoreContainer">
+          <EntitySet Name="CM_Employees" EntityType="BPMModel.Store.CM_Employees" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CM_Employees">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Division" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="StaffCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="StaffNameCN" Type="nvarchar" MaxLength="50" />
+          <Property Name="StaffNameEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="CostCenter" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkCenter" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthDay" Type="datetime" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Inner_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Exter_Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="iVantage_Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ADAccount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manual" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsCLT" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPersident" Type="nvarchar" MaxLength="50" />
+          <Property Name="CashAdvance" Type="float" />
+          <Property Name="ExtendInfo1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo3" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo4" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo5" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo6" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo7" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo8" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo9" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExtendInfo10" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployDate" Type="datetime" />
+          <Property Name="DimissionDate" Type="datetime" />
+          <Property Name="EmployeeType" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProbationDate" Type="datetime" />
+          <Property Name="ContractDate" Type="datetime" />
+          <Property Name="LastContractDate" Type="datetime" />
+          <Property Name="BusinessUnit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Band" Type="nvarchar" MaxLength="10" />
+          <Property Name="Temp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Intern" Type="nvarchar" MaxLength="10" />
+          <Property Name="KingDee1" Type="nvarchar" MaxLength="50" />
+          <Property Name="KingDee2" Type="nvarchar" MaxLength="50" />
+          <Property Name="KingDee3" Type="nvarchar" MaxLength="200" />
+          <Property Name="KingDee4" Type="nvarchar" MaxLength="50" />
+          <Property Name="KingDee5" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="ISExceptionMan" Type="bit" />
+          <Property Name="CityRayManager" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeamStaffCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TeamStaffName" Type="nvarchar" MaxLength="50" />
+          <Property Name="HRBPStaffAD" Type="nvarchar" MaxLength="50" />
+          <Property Name="Group" Type="nvarchar" MaxLength="50" />
+          <Property Name="JobFamily" Type="nvarchar" MaxLength="50" />
+          <Property Name="Track" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BPMModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BPMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CM_Employees" EntityType="BPMModel.CM_Employees" />
+        </EntityContainer>
+        <EntityType Name="CM_Employees">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Division" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Department" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StaffCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StaffNameCN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StaffNameEN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CostCenter" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WorkCenter" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BirthDay" Type="DateTime" Precision="3" />
+          <Property Name="Gender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Inner_Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Exter_Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="iVantage_Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Manager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ManagerName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ADAccount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Manual" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsCLT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsPersident" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CashAdvance" Type="Double" />
+          <Property Name="ExtendInfo1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo6" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo7" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo8" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo9" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExtendInfo10" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EmployDate" Type="DateTime" Precision="3" />
+          <Property Name="DimissionDate" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeType" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ProbationDate" Type="DateTime" Precision="3" />
+          <Property Name="ContractDate" Type="DateTime" Precision="3" />
+          <Property Name="LastContractDate" Type="DateTime" Precision="3" />
+          <Property Name="BusinessUnit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Band" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Temp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Intern" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="KingDee1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KingDee2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KingDee3" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KingDee4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KingDee5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ISExceptionMan" Type="Boolean" />
+          <Property Name="CityRayManager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TeamStaffCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TeamStaffName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HRBPStaffAD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Group" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="JobFamily" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Track" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BPMModelStoreContainer" CdmEntityContainer="BPMEntities">
+          <EntitySetMapping Name="CM_Employees">
+            <EntityTypeMapping TypeName="BPMModel.CM_Employees">
+              <MappingFragment StoreEntitySet="CM_Employees">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CompanyNo" ColumnName="CompanyNo" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="StaffCode" ColumnName="StaffCode" />
+                <ScalarProperty Name="StaffNameCN" ColumnName="StaffNameCN" />
+                <ScalarProperty Name="StaffNameEN" ColumnName="StaffNameEN" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+                <ScalarProperty Name="WorkCenter" ColumnName="WorkCenter" />
+                <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Inner_Email" ColumnName="Inner_Email" />
+                <ScalarProperty Name="Exter_Email" ColumnName="Exter_Email" />
+                <ScalarProperty Name="iVantage_Code" ColumnName="iVantage_Code" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+                <ScalarProperty Name="ADAccount" ColumnName="ADAccount" />
+                <ScalarProperty Name="Manual" ColumnName="Manual" />
+                <ScalarProperty Name="IsCLT" ColumnName="IsCLT" />
+                <ScalarProperty Name="IsPersident" ColumnName="IsPersident" />
+                <ScalarProperty Name="CashAdvance" ColumnName="CashAdvance" />
+                <ScalarProperty Name="ExtendInfo1" ColumnName="ExtendInfo1" />
+                <ScalarProperty Name="ExtendInfo2" ColumnName="ExtendInfo2" />
+                <ScalarProperty Name="ExtendInfo3" ColumnName="ExtendInfo3" />
+                <ScalarProperty Name="ExtendInfo4" ColumnName="ExtendInfo4" />
+                <ScalarProperty Name="ExtendInfo5" ColumnName="ExtendInfo5" />
+                <ScalarProperty Name="ExtendInfo6" ColumnName="ExtendInfo6" />
+                <ScalarProperty Name="ExtendInfo7" ColumnName="ExtendInfo7" />
+                <ScalarProperty Name="ExtendInfo8" ColumnName="ExtendInfo8" />
+                <ScalarProperty Name="ExtendInfo9" ColumnName="ExtendInfo9" />
+                <ScalarProperty Name="ExtendInfo10" ColumnName="ExtendInfo10" />
+                <ScalarProperty Name="EmployDate" ColumnName="EmployDate" />
+                <ScalarProperty Name="DimissionDate" ColumnName="DimissionDate" />
+                <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+                <ScalarProperty Name="ProbationDate" ColumnName="ProbationDate" />
+                <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+                <ScalarProperty Name="LastContractDate" ColumnName="LastContractDate" />
+                <ScalarProperty Name="BusinessUnit" ColumnName="BusinessUnit" />
+                <ScalarProperty Name="Band" ColumnName="Band" />
+                <ScalarProperty Name="Temp" ColumnName="Temp" />
+                <ScalarProperty Name="Intern" ColumnName="Intern" />
+                <ScalarProperty Name="KingDee1" ColumnName="KingDee1" />
+                <ScalarProperty Name="KingDee2" ColumnName="KingDee2" />
+                <ScalarProperty Name="KingDee3" ColumnName="KingDee3" />
+                <ScalarProperty Name="KingDee4" ColumnName="KingDee4" />
+                <ScalarProperty Name="KingDee5" ColumnName="KingDee5" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ISExceptionMan" ColumnName="ISExceptionMan" />
+                <ScalarProperty Name="CityRayManager" ColumnName="CityRayManager" />
+                <ScalarProperty Name="TeamStaffCode" ColumnName="TeamStaffCode" />
+                <ScalarProperty Name="TeamStaffName" ColumnName="TeamStaffName" />
+                <ScalarProperty Name="HRBPStaffAD" ColumnName="HRBPStaffAD" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="JobFamily" ColumnName="JobFamily" />
+                <ScalarProperty Name="Track" ColumnName="Track" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
